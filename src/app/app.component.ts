@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HorizonService } from './horizon.service';
+import { HorizonService } from './shared/horizon.service';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { HorizonService } from './horizon.service';
   providers: [HorizonService]
 })
 export class AppComponent implements OnInit {
-  title = 'app works!';
+  title = 'Lift App';
   users = [];
   constructor(private horizonService: HorizonService) {}
   ngOnInit() {    
