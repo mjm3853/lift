@@ -1,8 +1,9 @@
 <h1>
   {{title}}
 </h1>
+<h2>Users</h2>
 <ul>
-  <li *ngFor='let lift of lifts'>
-    {{lift.test}}
+  <li *ngFor='let user of users'>
+    Username: {{user.username}}, Email: {{user.email}}, First Plan Id: {{user.plans[0].planid}}
   </li>
 </ul>
