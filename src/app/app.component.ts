@@ -10,13 +10,13 @@ import { HorizonService } from './horizon.service';
 })
 export class AppComponent implements OnInit {
   title = 'app works!';
-  list = [];
+  lifts = [];
   constructor(private horizonService: HorizonService) {}
   ngOnInit() {    
     this.horizonService.connect().then(()=> {      
       this.horizonService.horizon('lifts').watch().subscribe((result)=> {
         console.log('result', result);
-        this.list = result; 
+        this.lifts = result; 
       });      
     });    
   }     

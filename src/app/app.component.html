@@ -1,4 +1,8 @@
 <h1>
   {{title}}
-  {{list}}
 </h1>
+<ul>
+  <li *ngFor='let lift of lifts'>
+    {{lift.test}}
+  </li>
+</ul>
