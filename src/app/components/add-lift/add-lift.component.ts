@@ -8,6 +8,7 @@ import { HorizonService } from '../../shared/horizon.service';
 })
 export class AddLiftComponent implements OnInit {
   title = "Add Lift"
+  weightTypes = ["Pounds"]
   autoLift = {
     name: "Auto Workout Test",
     timestamp: new Date(),

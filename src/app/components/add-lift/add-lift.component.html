@@ -20,8 +20,10 @@
         <input type="text" class="form-control" id="weight" required>
         <br>
         <br>
-        <label for="name">Weight Type</label>
-        <input type="text" class="form-control" id="weightType" required>
+        <label for="weightTypes">Weight Type</label>
+        <select class="form-control" id="weightTypes" required>
+            <option *ngFor="let weightType of weightTypes" [value]="weightTypes">{{weightTypes}}</option>
+            </select>
     </div>
     <button (click)="addLift()" class="btn btn-default">Add Lift!</button>
 </form>
