@@ -3,7 +3,8 @@
     <h3>Workout</h3>
     <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" required [(ngModel)]="autoLift.name" name="name">
+        <input type="text" class="form-control" required [(ngModel)]="autoLift.name" name="name">
+        <p>TODO: remove this: {{autoLift.name}}</p>
     </div>
     <h4>Lift</h4>
     <div class="form-group">
@@ -13,9 +14,9 @@
     <h5>Set</h5>
     <div class="form-group">
         <label for="name">Reps</label>
-        <input type="text" class="form-control" id="reps" required>
+        <input type="text" class="form-control" id="reps" required [(ngModel)]="autoLift.lifts[0].sets[0].reps" name="reps">
         <label for="name">Weight</label>
-        <input type="text" class="form-control" id="weight" required>
+        <input type="text" class="form-control" id="weight" required [(ngModel)]="autoLift.lifts[0].sets[0].weight" name="weight">
         <label for="weightTypes">Weight Type</label>
         <select class="form-control" id="weightTypes" required>
             <option *ngFor="let weightType of weightTypes" [value]="weightTypes">{{weightTypes}}</option>
