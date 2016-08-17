@@ -1,10 +1,15 @@
 <h2>{{title}}</h2>
 <ul>
   <li *ngFor='let workout of workouts'>
-    {{workout.name}}
+    {{workout.name}} on {{workout.timestamp}}
     <ul>
       <li *ngFor='let lift of workout.lifts'>
         {{lift.name}}
+        <ul>
+          <li *ngFor='let set of lift.sets'>
+            {{set.reps}} x {{set.weight + ' ' + set.weightType}}
+          </li>
+        </ul>
       </li>
     </ul>
   </li>
