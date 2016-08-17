@@ -1,0 +1,27 @@
+r.db('lift').table('workouts_d07e124ff6f8').insert({
+  name: "Test Workout",
+  timestamp: new Date(),
+  lifts: [{
+    name: "Curls",
+    sets: [{
+      reps: 10,
+      weight: 25,
+      weightType: "Pounds"
+    }, {
+        reps: 12,
+        weight: 25,
+        weightType: "Pounds"
+      }]
+  }, {
+      name: "Shoulder Presses",
+      sets: [{
+        reps: 10,
+        weight: 25,
+        weightType: "Pounds"
+      }, {
+          reps: 12,
+          weight: 25,
+          weightType: "Pounds"
+        }]
+    }]
+})

@@ -270,3 +270,30 @@
 2016-08-15T00:51:42.142600725 215.727694s info: Table 80022096-ea18-4c3e-aafe-26f6b1bff430: This server is Raft leader for term 1. Latest log index is 0.
 2016-08-15T00:51:52.565895145 226.150989s notice: Removing file /home/matt/projects/lift/rethinkdb_data/28887ea2-0134-441e-b8e3-0569d8df0fac
 2016-08-15T00:51:52.565901882 226.150995s info: Table 28887ea2-0134-441e-b8e3-0569d8df0fac: Deleted the table.
+2016-08-15T00:55:52.048262293 465.633356s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2016-08-15T00:55:52.048367885 465.633461s notice: Shutting down client connections...
+2016-08-15T00:55:52.058721765 465.643816s notice: All client connections closed.
+2016-08-15T00:55:52.058743140 465.643837s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-08-15T00:55:52.075045915 465.660140s notice: Storage engine shut down.
+2016-08-16T20:15:49.783468492 0.499194s notice: Running rethinkdb 2.3.4~0xenial (GCC 5.3.1)...
+2016-08-16T20:15:49.791011068 0.506738s notice: Running on Linux 4.4.0-34-generic x86_64
+2016-08-16T20:15:49.791062984 0.506788s notice: Loading data from directory /home/matt/projects/lift/rethinkdb_data
+2016-08-16T20:15:49.916895964 0.632621s info: Cache size is set to 200 MB
+2016-08-16T20:15:49.917986841 0.633712s notice: Listening for intracluster connections on port 36489
+2016-08-16T20:15:50.008977142 0.724702s notice: Listening for client driver connections on port 42242
+2016-08-16T20:15:50.009176957 0.724902s notice: Listening for administrative HTTP connections on port 38528
+2016-08-16T20:15:50.009195037 0.724920s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-08-16T20:15:50.009197083 0.724922s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-08-16T20:15:50.009201237 0.724926s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-08-16T20:15:50.009203195 0.724928s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-08-16T20:15:50.009205585 0.724931s notice: Server ready, "matt_XPS_13_9343_wyb" 0640b852-2646-4e1d-bf89-38effead81eb
+2016-08-16T20:15:51.222968961 1.938694s info: Table 9ca05335-7cf1-4927-8208-5f3984b00661: Starting a new Raft election for term 11.
+2016-08-16T20:15:51.226548959 1.942274s info: Table 9ca05335-7cf1-4927-8208-5f3984b00661: This server is Raft leader for term 11. Latest log index is 40.
+2016-08-16T20:15:51.257407173 1.973132s info: Table 80022096-ea18-4c3e-aafe-26f6b1bff430: Starting a new Raft election for term 2.
+2016-08-16T20:15:51.260956268 1.976681s info: Table 80022096-ea18-4c3e-aafe-26f6b1bff430: This server is Raft leader for term 2. Latest log index is 4.
+2016-08-16T20:15:51.338419665 2.054145s info: Table b7aaf962-8cb1-422e-9ef8-2bdfe7bf5379: Starting a new Raft election for term 11.
+2016-08-16T20:15:51.341813488 2.057539s info: Table b7aaf962-8cb1-422e-9ef8-2bdfe7bf5379: This server is Raft leader for term 11. Latest log index is 30.
+2016-08-16T20:15:51.830372183 2.546097s info: Table 6f5f2d33-1829-483d-8384-bfd4936459f5: Starting a new Raft election for term 11.
+2016-08-16T20:15:51.833854793 2.549580s info: Table 6f5f2d33-1829-483d-8384-bfd4936459f5: This server is Raft leader for term 11. Latest log index is 30.
+2016-08-16T20:15:51.851105363 2.566831s info: Table 370a8ccd-d7d2-4fe3-b4f3-dcdbe8fc7dfc: Starting a new Raft election for term 11.
+2016-08-16T20:15:51.854566146 2.570291s info: Table 370a8ccd-d7d2-4fe3-b4f3-dcdbe8fc7dfc: This server is Raft leader for term 11. Latest log index is 30.
