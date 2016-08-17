@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { PlanComponent } from './components/plan/plan.component';
 import { LiftLogComponent } from './components/lift-log/lift-log.component';
+import { AddLiftComponent } from './components/add-lift/add-lift.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     PlanComponent,
-    LiftLogComponent
+    LiftLogComponent,
+    AddLiftComponent
   ],
   imports: [
     BrowserModule,

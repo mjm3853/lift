@@ -297,3 +297,4 @@
 2016-08-16T20:15:51.833854793 2.549580s info: Table 6f5f2d33-1829-483d-8384-bfd4936459f5: This server is Raft leader for term 11. Latest log index is 30.
 2016-08-16T20:15:51.851105363 2.566831s info: Table 370a8ccd-d7d2-4fe3-b4f3-dcdbe8fc7dfc: Starting a new Raft election for term 11.
 2016-08-16T20:15:51.854566146 2.570291s info: Table 370a8ccd-d7d2-4fe3-b4f3-dcdbe8fc7dfc: This server is Raft leader for term 11. Latest log index is 30.
+2016-08-16T21:41:24.853505462 5135.569231s info: Table 80022096-ea18-4c3e-aafe-26f6b1bff430: Configuration is changing.
