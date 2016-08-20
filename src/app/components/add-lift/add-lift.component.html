@@ -8,21 +8,21 @@
             <div class="form-group">
                 <input type="text" class="form-control" required [(ngModel)]="liftModel.name" name="name">
             </div>
-            <div class="well col-md-12">
+            <div class="well well-sm col-md-12" *ngFor='let lift of liftModel.lifts'>
                 <h4>Lift Name</h4>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="name" required [(ngModel)]="liftModel.lifts[0].name" name="liftname">
+                    <input type="text" class="form-control" id="name" required [(ngModel)]="lift.name" name="liftname">
                 </div>
-                <div class="well col-md-12">
+                <div class="well well-sm col-md-12" *ngFor='let set of lift.sets'>
                     <h5>Set</h5>
                     <div class="form-group">
                         <label for="name" class="col-xs-4">Reps</label>
                         <div class="col-xs-8">
-                            <input type="text" class="form-control" id="reps" required [(ngModel)]="liftModel.lifts[0].sets[0].reps" name="reps">
+                            <input type="text" class="form-control" id="reps" required [(ngModel)]="set.reps" name="reps">
                         </div>
                         <label class="col-xs-4" for="name">Weight</label>
                         <div class="col-xs-8">
-                            <input type="text" class="form-control" id="weight" required [(ngModel)]="liftModel.lifts[0].sets[0].weight" name="weight">
+                            <input type="text" class="form-control" id="weight" required [(ngModel)]="set.weight" name="weight">
                         </div>
                         <label class="col-xs-4" for="weightTypes">Type</label>
                         <div class="col-xs-8">
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-                <button>+</button>
+                <button (click)="plusSet()">+</button>
             </div>
             <button>+</button>
             <br>
