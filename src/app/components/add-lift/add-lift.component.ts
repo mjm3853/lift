@@ -9,8 +9,8 @@ import { HorizonService } from '../../shared/horizon.service';
 export class AddLiftComponent implements OnInit {
   title = "Add Lift"
   weightTypes = ["Pounds"]
-  autoLift = {
-    name: "Auto Workout Test",
+  liftModel = {
+    name: "Lift Model",
     timestamp: new Date(),
     lifts: [{
       name: "Curls",
@@ -18,27 +18,12 @@ export class AddLiftComponent implements OnInit {
         reps: 10,
         weight: 25,
         weightType: "Pounds"
-      }, {
-          reps: 12,
-          weight: 25,
-          weightType: "Pounds"
-        }]
-    }, {
-        name: "Shoulder Presses",
-        sets: [{
-          reps: 10,
-          weight: 25,
-          weightType: "Pounds"
-        }, {
-            reps: 12,
-            weight: 25,
-            weightType: "Pounds"
-          }]
       }]
+    }]
   }
   
   addLift() {
-    this.horizonService.horizon('workouts').store(this.autoLift);
+    this.horizonService.horizon('workouts').store(this.liftModel);
   }
   
   constructor(private horizonService: HorizonService) { }
