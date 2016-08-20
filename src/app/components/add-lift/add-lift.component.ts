@@ -17,7 +17,7 @@ export class AddLiftComponent implements OnInit {
       sets: [{
         reps: 10,
         weight: 25,
-        weightType: "Pounds"
+        weightType: this.weightTypes
       }]
     }]
   }
