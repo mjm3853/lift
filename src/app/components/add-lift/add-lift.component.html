@@ -4,28 +4,39 @@
     </div>
     <div class="panel-body">
         <form ngbRadioGroup name="radioBasic">
-            <h3>Workout</h3>
+            <h3>Workout Name</h3>
             <div class="form-group">
-                <label for="name">Name</label>
                 <input type="text" class="form-control" required [(ngModel)]="liftModel.name" name="name">
             </div>
-            <h4>Lift</h4>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" required [(ngModel)]="liftModel.lifts[0].name" name="liftname">
+            <div class="well col-md-12">
+                <h4>Lift Name</h4>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" required [(ngModel)]="liftModel.lifts[0].name" name="liftname">
+                </div>
+                <div class="well col-md-12">
+                    <h5>Set</h5>
+                    <div class="form-group">
+                        <label for="name" class="col-xs-4">Reps</label>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" id="reps" required [(ngModel)]="liftModel.lifts[0].sets[0].reps" name="reps">
+                        </div>
+                        <label class="col-xs-4" for="name">Weight</label>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" id="weight" required [(ngModel)]="liftModel.lifts[0].sets[0].weight" name="weight">
+                        </div>
+                        <label class="col-xs-4" for="weightTypes">Type</label>
+                        <div class="col-xs-8">
+                            <select class="form-control" id="weightTypes" required>
+                        <option *ngFor="let weightType of weightTypes" [value]="weightTypes">{{weightTypes}}</option></select>
+                        </div>
+                    </div>
+                </div>
+                <button>+</button>
             </div>
-            <h5>Set</h5>
-            <div class="form-group">
-                <label for="name">Reps</label>
-                <input type="text" class="form-control" id="reps" required [(ngModel)]="liftModel.lifts[0].sets[0].reps" name="reps">
-                <label for="name">Weight</label>
-                <input type="text" class="form-control" id="weight" required [(ngModel)]="liftModel.lifts[0].sets[0].weight" name="weight">
-                <label for="weightTypes">Weight Type</label>
-                <select class="form-control" id="weightTypes" required>
-            <option *ngFor="let weightType of weightTypes" [value]="weightTypes">{{weightTypes}}</option>
-            </select>
-            </div>
-            <button (click)="addLift()" class="btn btn-default">Add Lift!</button>
+            <button>+</button>
+            <br>
+            <br>
+            <button (click)="addLift()" class="btn btn-default">Save Lift!</button>
         </form>
     </div>
 </div>
