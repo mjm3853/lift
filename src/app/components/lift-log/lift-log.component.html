@@ -6,9 +6,16 @@
       <li *ngFor='let lift of workout.lifts'>
         {{lift.name}}
         <ul>
-          <li *ngFor='let set of lift.sets'>
-            {{set.reps}} x {{set.weight + ' ' + set.weightType}}
-          </li>
+          <table>
+            <tr>
+              <th>Reps</th>
+              <th>Weight</th>
+            </tr>
+            <tr *ngFor='let set of lift.sets'>
+              <td>{{set.reps}}</td>
+              <td>{{set.weight + ' ' + set.weightType}}</td>
+            </tr>
+          </table>
         </ul>
       </li>
     </ul>
