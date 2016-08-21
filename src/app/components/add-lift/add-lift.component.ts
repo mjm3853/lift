@@ -21,24 +21,34 @@ export class AddLiftComponent implements OnInit {
       }]
     }]
   }
-  
+
   addLift() {
     this.horizonService.horizon('workouts').store(this.liftModel);
   }
-  
+
   plusSet(key) {
     console.log(key);
     this.liftModel.lifts[key].sets.push({
-      reps: 11,
-      weight: 12,
+      reps: 0,
+      weight: 0,
       weightType: this.weightTypes
     });
-    console.log(this.liftModel);
   }
-  
+
+  plusLift() {
+    this.liftModel.lifts.push({
+      name: "Next Lift",
+      sets: [{
+        reps: 0,
+        weight: 0,
+        weightType: this.weightTypes
+      }]
+    })
+  }
+
   constructor(private horizonService: HorizonService) { }
-  
-  
+
+
 
   ngOnInit() {
   }
