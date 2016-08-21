@@ -30,13 +30,15 @@
                         <option *ngFor="let weightType of weightTypes" [value]="weightTypes">{{weightTypes}}</option></select>
                         </div>
                     </div>
-                    <button (click)="plusSet(liftIndex)">+</button>
+
                 </div>
+                <button (click)="plusSet(liftIndex)">+</button>
             </div>
             <button (click)="plusLift()">+</button>
             <br>
             <br>
-            <button (click)="addLift()" class="btn btn-default">Save Lift!</button>
+            <button (click)="addLift()" class="btn btn-success">Save Lift!</button>
+            <button (click)="reset()" class="btn btn-default">Reset</button>
         </form>
     </div>
 </div>

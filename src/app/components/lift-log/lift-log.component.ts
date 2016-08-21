@@ -13,7 +13,7 @@ export class LiftLogComponent implements OnInit {
   constructor(private horizonService: HorizonService) { }
   ngOnInit() {
     this.horizonService.connect().then(() => {
-      this.horizonService.horizon('workouts').watch().subscribe((result) => {
+      this.horizonService.horizon('workouts').order("timestamp", "descending").watch().subscribe((result) => {
         console.log('result', result);
         this.workouts = result;
       });

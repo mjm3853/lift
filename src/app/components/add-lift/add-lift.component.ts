@@ -10,13 +10,13 @@ export class AddLiftComponent implements OnInit {
   title = "Add Lift"
   weightTypes = ["Pounds"]
   liftModel = {
-    name: "Lift Model",
+    name: "New Workout",
     timestamp: new Date(),
     lifts: [{
-      name: "Curls",
+      name: "New Lift",
       sets: [{
-        reps: 10,
-        weight: 25,
+        reps: 0,
+        weight: 0,
         weightType: this.weightTypes
       }]
     }]
@@ -46,9 +46,22 @@ export class AddLiftComponent implements OnInit {
     })
   }
 
+  reset() {
+    this.liftModel = {
+      name: "New Workout",
+      timestamp: new Date(),
+      lifts: [{
+        name: "New Lift",
+        sets: [{
+          reps: 0,
+          weight: 0,
+          weightType: this.weightTypes
+        }]
+      }]
+    }
+  }
+
   constructor(private horizonService: HorizonService) { }
-
-
 
   ngOnInit() {
   }
