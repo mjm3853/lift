@@ -5,7 +5,7 @@
   <ol class="list-group">
     <li class="list-group-item" *ngFor='let workout of workouts'>
       <h3>{{workout.name}}</h3>
-      <p>{{workout.timestamp}}</p>
+      <p>{{workout.timestamp | date:'short'}}</p>
       <ul class="list-group">
         <li class="list-group-item" *ngFor='let lift of workout.lifts'>
           <h4>{{lift.name}}</h4>
