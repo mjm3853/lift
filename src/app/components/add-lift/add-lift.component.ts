@@ -26,8 +26,9 @@ export class AddLiftComponent implements OnInit {
     this.horizonService.horizon('workouts').store(this.liftModel);
   }
   
-  plusSet() {
-    this.liftModel.lifts[0].sets.push({
+  plusSet(key) {
+    console.log(key);
+    this.liftModel.lifts[key].sets.push({
       reps: 11,
       weight: 12,
       weightType: this.weightTypes
