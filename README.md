@@ -2,11 +2,9 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.11-webpack.2.
 
-The backend for this project is created with [horizon.io](https://github.com/rethinkdb/horizon).
-
 ## All Server Commands
 
-Run `npm start` to concurrently start the Angular server at `http://localhost:4200/` and the Horizon RethinkDB servers (check logs for ports).
+Run `npm start` to concurrently start the Angular server at `http://localhost:4200/`.
 
 ## Basic Angular Commands
 
