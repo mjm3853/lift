@@ -4,12 +4,10 @@
     </div>
     <div class="panel-body">
         <form ngbRadioGroup name="radioBasic">
-            <h3>Workout Name</h3>
             <div class="form-group">
                 <input type="text" class="form-control" required [(ngModel)]="liftModel.name" name="name">
             </div>
             <div class="well well-sm col-md-12" *ngFor='let lift of liftModel.lifts; let liftIndex=index'>
-                <h4>Lift Name</h4>
                 <div class="form-group">
                     <input type="text" class="form-control" id="name" required [(ngModel)]="lift.name" name="liftname">
                 </div>

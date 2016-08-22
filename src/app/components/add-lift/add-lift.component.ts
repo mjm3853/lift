@@ -24,6 +24,7 @@ export class AddLiftComponent implements OnInit {
 
   addLift() {
     this.horizonService.horizon('workouts').store(this.liftModel);
+    this.reset();
   }
 
   plusSet(key) {
