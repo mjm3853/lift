@@ -35,6 +35,10 @@ export class AddLiftComponent implements OnInit {
       weightType: this.weightTypes
     });
   }
+  
+  minusSet(key) {
+    this.liftModel.lifts[key].sets.pop()
+  }
 
   plusLift() {
     this.liftModel.lifts.push({
@@ -45,6 +49,10 @@ export class AddLiftComponent implements OnInit {
         weightType: this.weightTypes
       }]
     })
+  }
+  
+  minusLift() {
+   this.liftModel.lifts.pop()
   }
 
   reset() {
