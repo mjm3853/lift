@@ -15,6 +15,7 @@ export class LiftLogComponent implements OnInit {
     this.horizonService.connect().then(() => {
       this.horizonService.horizon('workouts').watch().subscribe((result) => {
         this.workouts = result;
+        console.log(result);
       }, (error) => console.error(error), () => console.log('Results fetched'));
     });
   }
