@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HorizonService } from '../../shared/horizon.service';
-import { AddLiftComponent } from '../add-lift/add-lift.component'
 
 @Component({
   selector: 'app-lift-stats',
@@ -12,9 +11,38 @@ export class LiftStatsComponent implements OnInit {
   totalNumberOfLifts: number
   totalWeightLifted: any
   testValue: any
-  workouts=[]
+  workouts = []
   lifted: number
-  liftedArray=[]
+  liftedArray = []
+
+  evaluateAllWorkoutsForTotalLifted(workouts) {
+    workouts.forEach((workout) => {
+      this.evaluateEachWorkoutForTotalLifted(workout)
+    })
+  }
+
+  evaluateEachWorkoutForTotalLifted(workout) {
+    workout.lifts.forEach((lift) => {
+      this.evaluateEachLiftForTotalLifted(lift)
+    })
+  }
+
+  evaluateEachLiftForTotalLifted(lift) {
+    lift.sets.map((set) => {
+      this.updateLiftedArray(set)
+    })
+  }
+
+  updateLiftedArray(set) {
+    this.lifted = set.reps * set.weight
+    this.liftedArray.push(this.lifted);
+  }
+
+  processLiftedArray(liftedArray) {
+    liftedArray.reduce((prev, curr) => {
+      return this.totalWeightLifted = prev + curr
+    })
+  }
 
   constructor(private horizonService: HorizonService) { }
 
@@ -24,20 +52,11 @@ export class LiftStatsComponent implements OnInit {
         this.workouts = result;
         this.totalNumberOfLifts = this.workouts.length
         this.liftedArray = []
-        this.workouts.forEach((workout) => {
-          workout.lifts.forEach((lift) => {
-            lift.sets.map((set) => {
-              this.lifted = set.reps * set.weight
-              this.liftedArray.push(this.lifted);
-            })
-          })
-        })
-        
-        this.liftedArray.reduce((prev, curr) => {
-          return this.totalWeightLifted = prev + curr
-        })
-        
+
+        this.evaluateAllWorkoutsForTotalLifted(this.workouts);
+        this.processLiftedArray(this.liftedArray);
+
       }, (error) => console.error(error), () => console.log('Results fetched'));
-    });  
+    });
   }
 }
