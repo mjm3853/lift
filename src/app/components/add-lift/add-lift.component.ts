@@ -9,15 +9,16 @@ import { HorizonService } from '../../shared/horizon.service';
 export class AddLiftComponent implements OnInit {
   title = "Add Lift"
   weightTypes = ["Pounds"]
+  liftTypes = ["Dumbbell Shoulder Press", "Dumbbell Bench Press", "Curls", "Push Ups", "Pull Ups"]
   liftModel = {
     name: "New Workout",
     timestamp: new Date(),
     lifts: [{
-      name: "New Lift",
+      name: this.liftTypes[0],
       sets: [{
         reps: 0,
         weight: 0,
-        weightType: this.weightTypes
+        weightType: this.weightTypes[0]
       }]
     }]
   }
@@ -28,11 +29,10 @@ export class AddLiftComponent implements OnInit {
   }
 
   plusSet(key) {
-    console.log(key);
     this.liftModel.lifts[key].sets.push({
       reps: 0,
       weight: 0,
-      weightType: this.weightTypes
+      weightType: this.weightTypes[0]
     });
   }
   
@@ -42,11 +42,11 @@ export class AddLiftComponent implements OnInit {
 
   plusLift() {
     this.liftModel.lifts.push({
-      name: "Next Lift",
+      name: this.liftTypes[0],
       sets: [{
         reps: 0,
         weight: 0,
-        weightType: this.weightTypes
+        weightType: this.weightTypes[0]
       }]
     })
   }
@@ -60,11 +60,11 @@ export class AddLiftComponent implements OnInit {
       name: "New Workout",
       timestamp: new Date(),
       lifts: [{
-        name: "New Lift",
+        name: this.liftTypes[0],
         sets: [{
           reps: 0,
           weight: 0,
-          weightType: this.weightTypes
+          weightType: this.weightTypes[0]
         }]
       }]
     }
