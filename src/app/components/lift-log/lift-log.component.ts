@@ -9,6 +9,10 @@ import { HorizonService } from '../../shared/horizon.service';
 export class LiftLogComponent implements OnInit {
   title = "Lift Log";
   workouts = [];
+  
+  deleteWorkout(workoutId) {
+    this.horizonService.horizon('workouts').remove(workoutId)
+  }
 
   constructor(private horizonService: HorizonService) { }
   ngOnInit() {
