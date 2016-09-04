@@ -2,7 +2,11 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.11-webpack.2.
 
-## All Server Commands
+## DB dependency
+
+I have a separate container for a Horizon.io DB at `https://github.com/mjm3853/liftDB` 
+
+## Start the App
 
 Run `npm start` to concurrently start the Angular server at `http://localhost:4200/`.
 

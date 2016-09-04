@@ -17,8 +17,9 @@ class Set {
 
 export class WorkoutStore {
     workout: Workout;
-
-    weightTypes = ["Pounds"]
+    weightTypes = [
+        "Pounds"
+    ]
     liftTypes = [
         "Dumbbell Shoulder Press",
         "Dumbbell Bench Press",
