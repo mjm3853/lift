@@ -43,6 +43,9 @@ export class WorkoutStore {
                 }]
             }]
         }
+        
+        console.log('before')
+        console.log(this.workout)
     }
 
     plusSet(key) {
@@ -57,7 +60,7 @@ export class WorkoutStore {
         this.workout.lifts[key].sets.pop()
     }
 
-    plusLift() {
+    plusLift() {        
         this.workout.lifts.push({
             name: this.liftTypes[0],
             sets: [{
@@ -66,6 +69,9 @@ export class WorkoutStore {
                 weightType: this.weightTypes[0]
             }]
         })
+        
+        console.log('after')
+        console.log(this.workout)
     }
 
     minusLift() {

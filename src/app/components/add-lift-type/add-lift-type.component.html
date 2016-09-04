@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2>{{title}}</h2>
+  </div>
+  <div class="panel-body">
+    <form>
+      <div class="form-group">
+        <div>
+          <input type="text" class="form-control" required [(ngModel)]="addliftType" name="addLiftType">
+        </div>
+      </div>
+      <button (click)="addLiftType(addliftType)" class="btn btn-success">Save New Lift Type!</button>
+    </form>
+  </div>
+</div>
