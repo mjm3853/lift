@@ -19,7 +19,15 @@ export class WorkoutStore {
     workout: Workout;
 
     weightTypes = ["Pounds"]
-    liftTypes = ["Dumbbell Shoulder Press", "Dumbbell Bench Press", "Curls", "Push Ups", "Pull Ups"]
+    liftTypes = [
+        "Dumbbell Shoulder Press",
+        "Dumbbell Bench Press",
+        "Curls",
+        "Push Ups",
+        "Pull Ups",
+        "Squats",
+        "Deadlifts"
+    ]
 
     constructor() {
         this.workout = {

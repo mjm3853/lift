@@ -9,10 +9,9 @@ import { WorkoutStore } from '../../shared/lift.store';
 })
 export class AddLiftComponent implements OnInit {
   title = "Add Lift"
-  liftModel = this.store.workout
 
   addLift() {
-    this.horizonService.horizon('workouts').store(this.liftModel);
+    this.horizonService.horizon('workouts').store(this.store.workout);
     this.reset();
   }
 
