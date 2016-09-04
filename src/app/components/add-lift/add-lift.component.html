@@ -5,13 +5,13 @@
     <div class="panel-body">
         <form>
             <div class="form-group">
-                <input type="text" class="form-control" required [(ngModel)]="liftModel.name" name="name">
+                <input type="text" class="form-control" required [(ngModel)]="store.workout.name" name="name">
             </div>
-            <div class="well well-sm col-md-12" *ngFor='let lift of liftModel.lifts; let liftIndex=index'>
+            <div class="well well-sm col-md-12" *ngFor='let lift of store.workout.lifts; let liftIndex=index'>
                 <div class="form-group">
                     <div>
                         <select class="form-control" id="liftType" name="liftType" required [(ngModel)]=lift.name>
-                        <option *ngFor="let liftType of liftTypes" [value]="liftType">{{liftType}}</option></select>
+                        <option *ngFor="let liftType of store.liftTypes" [value]="liftType">{{liftType}}</option></select>
                     </div>
                 </div>
                 <div class="well well-sm col-md-12" *ngFor='let set of lift.sets; let i=index'>
@@ -28,7 +28,7 @@
                         <label class="col-xs-4" for="weightTypes">Type</label>
                         <div class="col-xs-8">
                             <select class="form-control" id="weightTypes" name="weightType" [(ngModel)]=set.weightType required>
-                        <option *ngFor="let weightType of weightTypes" [value]="weightType">{{weightType}}</option></select>
+                        <option *ngFor="let weightType of store.weightTypes" [value]="weightType">{{weightType}}</option></select>
                         </div>
                     </div>
 

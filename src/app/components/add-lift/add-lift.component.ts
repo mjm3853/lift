@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HorizonService } from '../../shared/horizon.service';
-
+import { WorkoutStore } from '../../shared/lift.store';
+ 
 @Component({
   selector: 'app-add-lift',
   templateUrl: 'add-lift.component.html',
@@ -8,20 +9,7 @@ import { HorizonService } from '../../shared/horizon.service';
 })
 export class AddLiftComponent implements OnInit {
   title = "Add Lift"
-  weightTypes = ["Pounds"]
-  liftTypes = ["Dumbbell Shoulder Press", "Dumbbell Bench Press", "Curls", "Push Ups", "Pull Ups"]
-  liftModel = {
-    name: "New Workout",
-    timestamp: new Date(),
-    lifts: [{
-      name: this.liftTypes[0],
-      sets: [{
-        reps: 0,
-        weight: 0,
-        weightType: this.weightTypes[0]
-      }]
-    }]
-  }
+  liftModel = this.store.workout
 
   addLift() {
     this.horizonService.horizon('workouts').store(this.liftModel);
@@ -29,50 +17,29 @@ export class AddLiftComponent implements OnInit {
   }
 
   plusSet(key) {
-    this.liftModel.lifts[key].sets.push({
-      reps: 0,
-      weight: 0,
-      weightType: this.weightTypes[0]
-    });
+    this.store.plusSet(key)
   }
   
   minusSet(key) {
-    this.liftModel.lifts[key].sets.pop()
+    this.store.minusSet(key)
   }
 
   plusLift() {
-    this.liftModel.lifts.push({
-      name: this.liftTypes[0],
-      sets: [{
-        reps: 0,
-        weight: 0,
-        weightType: this.weightTypes[0]
-      }]
-    })
+    this.store.plusLift()
   }
   
   minusLift() {
-   this.liftModel.lifts.pop()
+   this.store.minusLift()
   }
 
   reset() {
-    this.liftModel = {
-      name: "New Workout",
-      timestamp: new Date(),
-      lifts: [{
-        name: this.liftTypes[0],
-        sets: [{
-          reps: 0,
-          weight: 0,
-          weightType: this.weightTypes[0]
-        }]
-      }]
-    }
+    this.store.reset()
   }
 
-  constructor(private horizonService: HorizonService) { }
+  constructor(private horizonService: HorizonService, private store: WorkoutStore) { }
 
   ngOnInit() {
+    
   }
 
 }
