@@ -4,7 +4,7 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 
 ## DB dependency
 
-I have a separate container for a Horizon.io DB at `https://github.com/mjm3853/liftDB` 
+I have a separate container for a Horizon.io DB at [liftDB](https://github.com/mjm3853/liftDB) 
 
 ## Start the App
 
