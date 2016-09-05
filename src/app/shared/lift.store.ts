@@ -27,7 +27,10 @@ export class WorkoutStore {
         "Push Ups",
         "Pull Ups",
         "Squats",
-        "Deadlifts"
+        "Deadlifts",
+        "Kettlebell Upright Row",
+        "Kettlebell Deadlifts",
+        "Dumbbell One Arm Row"
     ]
 
     constructor() {
